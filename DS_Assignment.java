@@ -1,14 +1,11 @@
 import java.math.BigInteger;
 import java.util.LinkedList;
 import java.util.Scanner;
-import java.util.Map;
-import java.util.HashMap;
 
 public class DS_Assignment {
     public static void main(String[] args){
         Scanner scn = new Scanner(System.in);
         LinkedList<String> LL = new LinkedList<>();
-        LinkedList<String> tempo = new LinkedList<>();
         LinkedList<String> Container = new LinkedList<>();
         LinkedList<String> name_container = new LinkedList<>();
         boolean proceed = true;
@@ -35,12 +32,12 @@ public class DS_Assignment {
 
                     System.out.print("Please enter the name: ");
                     String name = scn.nextLine();
-                    tempo.add("Contact " + count + ". " + name);
+                    LL.add("Contact " + count + ". " + name);
                     name_container.add(name.toLowerCase());
 
                     System.out.print("Please enter the phone number: ");
                     BigInteger phone = scn.nextBigInteger();
-                    tempo.add(String.valueOf("Phone no: " + phone));
+                    LL.add(String.valueOf("Phone no: " + phone));
 
                     scn.nextLine();
 
@@ -49,9 +46,7 @@ public class DS_Assignment {
                     Container.add(name.toLowerCase());
                     Container.add("blank");
                     Container.add("blank");
-                    tempo.add("Email: " + email);
-                    LL.addAll(tempo);
-                    tempo.removeAll(tempo);
+                    LL.add("Email: " + email);
 
                     System.out.println("System: The contact " + name + " is added.");
                     count ++; break;
