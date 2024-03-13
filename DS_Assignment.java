@@ -12,7 +12,6 @@ public class DS_Assignment {
         LinkedList<String> Container = new LinkedList<>();
         LinkedList<String> name_container = new LinkedList<>();
         boolean proceed = true;
-        int position = 0;
 
         int count = 1;
 
@@ -48,6 +47,8 @@ public class DS_Assignment {
                     System.out.print("Please enter the email: ");
                     String email = scn.nextLine();
                     Container.add(name.toLowerCase());
+                    Container.add("blank");
+                    Container.add("blank");
                     tempo.add("Email: " + email);
                     LL.addAll(tempo);
                     tempo.removeAll(tempo);
@@ -56,6 +57,7 @@ public class DS_Assignment {
                     count ++; break;
 
                 case "D":
+                    int position = 0;
                     System.out.print("Please enter the contact you want to delete: ");
                     String contact = scn.nextLine();
                     for (String i:Container){
@@ -64,6 +66,7 @@ public class DS_Assignment {
 
                             for (int x = 0; x < 3; x++) {
                                 LL.remove(position);
+                                Container.remove(position);
                             }
 
                             System.out.println("System: The contact " + contact + " is removed.");
